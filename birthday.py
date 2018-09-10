@@ -1,7 +1,7 @@
 """
 birthday.py
-Author: <your name here>
-Credit: <list sources used, if any>
+Author: Emma Dunbar
+Credit: Stackoverflow, Python Software Foundation
 Assignment:
 
 Your program will ask the user the following questions, in this order:
@@ -31,3 +31,48 @@ Example Session
   And the day? 11
   Eric, you are a fall baby of the stone age.
 """
+name=input("Hello, what is your name? ")
+mon=input("Hi " + name + ", what was the name of the month you were born in? ")
+year=int(input("And what year were you born in, " + name + " ? "))
+day=int(input("And the day? "))
+w=["December","January","February"]
+sp=["March","April","May"]
+su=["June","July","August"]
+f=["September","November"]
+o=["October"]
+sa=range(0,1979)
+e=range(1980,1989)
+n=range(1990,1999)
+t=range(2000,2020)
+if (mon in w):
+    season="winter"
+if (mon in sp):
+    season="spring"
+if (mon in su):
+    season="summer"
+if (mon in f):
+    season="fall"
+if (mon in o):
+    season="fall"
+if (year in sa):
+    y="Stone Age"
+if (year in e):
+    y="eighties"
+if (year in n):
+    y="nineties"
+if (year in t):
+    y="two thousands"
+date="no"
+if (mon in o) and (day==31):
+    date="Halloween"
+    print("You were born on Halloween!")
+from datetime import datetime
+from calendar import month_name
+todaymonth = datetime.today().month
+todayday = datetime.today().day
+month = month_name[todaymonth]
+if (mon==month) and (day==todayday):
+    date="Today"
+    print("Happy Birthday!")
+if (date == "no"):
+    print(" " + name + ", you are a " + season + " baby of the " + y + ".")
