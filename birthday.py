@@ -55,7 +55,7 @@ if (mon in f):
 if (mon in o):
     season="fall"
 if (year in sa):
-    y="Stone Age"
+    y="stone age"
 if (year in e):
     y="eighties"
 if (year in n):
@@ -73,6 +73,6 @@ todayday = datetime.today().day
 month = month_name[todaymonth]
 if (mon==month) and (day==todayday):
     date="Today"
-    print("Happy Birthday!")
+    print("Happy birthday!")
 if (date == "no"):
     print(" " + name + ", you are a " + season + " baby of the " + y + ".")
